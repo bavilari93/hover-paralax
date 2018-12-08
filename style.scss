@@ -39,29 +39,58 @@ body {
     align-items: center;
 }
 
-section {
-    overflow: hidden;
-}
+
 
 a {
+    color: #BABABA;
+    font-size: 3rem;
+  transition: all .8s;
+
     text: {
         transform: uppercase;
-        align: center;
         decoration: none;
-
-	font-weight: 200;
-			color: #BABABA;
-        font: {
-            size: 10em;
-        }
     }
-}
 
-head {
 
-&:before {
+
+
+    &:before {
+        color: black;
         content: attr(data-bf);
         position: absolute;
+        font-size: 1rem;
+        margin-top:-1rem;
+        transition: all 1s;
     }
 
+    &:after {
+        color: black;
+        content: attr(data-af);
+        position: absolute;
+        font-size: 1rem;
+        transition: all 1s;
+
+        margin: {
+            top: 3.5rem;
+            left: -7rem;
+        }
+    }
+
+    &:hover { 
+        &:before{
+        transform: scale(1.5) translate(-20px, -5px);
+        
+        }
+        &:after {
+            transform: scale(1.5) translate(15px, 5px);
+        }
+    }
+
+
+}
+
+.head {
+	   &:hover {
+        transform: scale(1.2);
+}
 }

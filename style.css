@@ -17,19 +17,33 @@ body {
   justify-content: center;
   align-items: center; }
 
-section {
-  overflow: hidden; }
-
 a {
+  color: #BABABA;
+  font-size: 3rem;
+  transition: all .8s;
   text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  text-font-weight: 200;
-  text-color: #BABABA;
-  text-font-size: 10em; }
+  text-decoration: none; }
+  a:before {
+    color: black;
+    content: attr(data-bf);
+    position: absolute;
+    font-size: 1rem;
+    margin-top: -1rem;
+    transition: all 1s; }
+  a:after {
+    color: black;
+    content: attr(data-af);
+    position: absolute;
+    font-size: 1rem;
+    transition: all 1s;
+    margin-top: 3.5rem;
+    margin-left: -7rem; }
+  a:hover:before {
+    transform: scale(1.5) translate(-20px, -5px); }
+  a:hover:after {
+    transform: scale(1.5) translate(15px, 5px); }
 
-head:before {
-  content: attr(data-bf);
-  position: absolute; }
+.head:hover {
+  transform: scale(1.2); }
 
 /*# sourceMappingURL=style.css.map */
