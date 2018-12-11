@@ -1,3 +1,1 @@
 # hover-paralax
-
-fs
